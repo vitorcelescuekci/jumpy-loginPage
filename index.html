@@ -10,26 +10,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="formValidation.js" defer></script>
+    
 </head>
 
 <body>
     <header>
         <img id="dncLogo" src="./assets/img/dncLogo.png" alt="DNC logo">
     </header>
-    <form id="container" action="">
-        <img id="jumpyLogo" src="./assets/img/jumpyLogo.png" alt="Jumpy logo">
-        <h1 id="welcome">Bem vindo ao Jumpy!</h1>
-        <label for="i-nome">Nome Completo:</label>
-        <input id="i-nome" type="text" placeholder="Nome completo">
-        <label for="i-email">E-mail:</label>
-        <input id="i-email" type="email" placeholder="email@email.com">
-        <label for="i-phone">Telefone:</label>
-        <input id="i-phone" type="text" placeholder="(00)0000-0000">
-        <label for="i-cpf">CPF:</label>
-        <input id="i-cpf" type="text" placeholder="123.456.789-10">
-        <label for="i-senha">Senha:</label>
-        <input id="i-senha" type="password" placeholder="*************">
-        <button id="b-cadastrar">Cadastrar</button>
+    <form id="form" action="">
+        <div class="container">
+            <img id="jumpyLogo" src="./assets/img/jumpyLogo.png" alt="Jumpy logo">
+            <h1 id="welcome">Bem vindo ao Jumpy!</h1>
+        </div>
+        <!-- Name -->
+        <div class="container">
+            <label for="name" class="lab">Nome Completo:</label>
+            <input id="name" name="name" type="text" placeholder="Nome completo" class="inp">
+            <small></small>
+        </div>
+        <!-- E-mail -->
+        <div class="container">
+            <label for="email" class="lab">E-mail:</label>
+            <input id="email" name="email" type="email" placeholder="email@email.com" class="inp">
+            <small></small>
+        </div>
+        <!-- Phone -->
+        <div class="container">
+            <label for="phone" class="lab">Telefone:</label>
+            <input id="phone" name="phone" type="text" placeholder="(00)0000-0000" class="inp">
+            <small></small>
+        </div>
+        <!-- CPF number -->
+        <div class="container">
+            <label for="cpf" class="lab">CPF:</label>
+            <input id="cpf" name="cpf" type="text" placeholder="123.456.789-10" maxlength="14" autocomplete="off" class="inp">
+            <small></small>
+        </div>
+        <!-- Password -->
+        <div class="container">
+            <label for="password" class="lab">Senha:</label>
+            <input id="password" name="password" type="password" placeholder="*************" autocomplete="off" class="inp">
+            <small></small>
+        </div>
+        <!-- Button -->
+        <div class="container">
+            <button type="button" id="register">Cadastrar</button>
+            <small id="formInfo"></small>
+        </div>
     </form>
 </body>
 </html>
